@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { FormComponent } from './form/form.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FormComponent } from './form/form.component';
     AboutComponent,
     HomeComponent,
     FormComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
