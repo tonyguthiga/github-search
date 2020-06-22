@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl:"https://api.github.com/users/tonyguthiga?access_token=50e12a571fb494d463e18e8e5a9228e68a0b9147"
+  apikey:'c7eeeb6ff95183ba25bd27954bbc3bd69457277d'
 };
 
 /*

@@ -1,0 +1,88 @@
+<div id="home">
+    <h1>Welcome to Github-Search</h1>
+    <p>Searching made easy!</p>
+<div>
+<!-- Search form -->
+<div class="container col-md-4">
+    <div class="mb-4">
+        <input class="form-control" name="userName" type="text" placeholder="Search User Name" [(ngModel)]="userName" aria-label="Search">
+    </div>
+    <div class="form-group mb-3 ml-5">
+        <button target="_blank" class="btn btn-outline-dark btn-lg text-white" type="submit" (click)="submitUser()">Get User</button>
+    </div>
+</div> 
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Github User Name: {{user.login}} </h4>
+                    <ul class="card-text">
+                        <li class="list-group-item"><i class="fas fa-user-friends"></i> Followers: {{user.followers}}</li>
+                        <li class="list-group-item"><i class="fas fa-users f0c0"></i> Following: {{user.following}}</li>
+                        <li class="list-group-item"><i class="fas fa-folder-open"></i> Public Repo No: {{user.public_repos}}</li>
+                        <li class="list-group-item"><i class="fas fa-folder-open"></i> Github: <a href="{{user.html_url}}">{{user.html_url}}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-4 pt-50">
+            <img src="{{user.avatar_url}}" class="img-fluid z-depth-1-half" alt="avatar">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-4" *ngFor="let repo of repository">
+          <div class="card">
+            <ul>
+              <li class="list-group-item">{{repo.name}}</li>
+              <li class="list-group-item"> Description: {{repo.description}}</li>
+            </ul>
+          </div>
+        </div>
+    </div>
+</div> 
+
+
+
+ <!-- <div class="container">
+    <div class="form-group">
+        <form>
+        <label for="name"> <h4>Input The UserName Here:</h4></label>
+        <input type="text" name="githubUser" placeholder="Github Username" [(ngModel)]="userName">
+        <button type="submit" class="btn btn-success" (click)="submitUser()">Search</button>
+    
+  </form>
+    <blockquote class="text-center text-lg">
+        <ul>
+          <li appHighlight><br>
+          <p><strong>{{user.name}}</strong></p>
+          <img src="{{user.avatar_url}}">
+          <br><br>
+
+          <footer>
+            <cite>
+              <div class="row">
+                <div class="col-md-6">
+              <h4><I> Location</I>:{{user.location}} </h4><br><br>
+              <h4><I>Followers_url</I>:{{user.followers_url}}</h4><br><br>
+              <h4><I>Following:</I>{{user.following_url}}</h4><br><br>
+              <h4><I>Number Of Repositories</I>:{{user.repos_url}}</h4><br><br>
+            </div>
+
+            
+            </div>
+            </cite>
+            </footer>
+            </li>
+          </ul>
+        </blockquote> -->
+
+  <!-- <div *ngFor="let repo of reporesponse, let i=index">
+          <p>{{reporesponse[i].name}}</p>
+          <p>{{reporesponse[i].description}}</p>
+        </div> 
+
+        <p><u>Pipe</u>: <u>Data requested on</u>: {{user.completeDate|date|date :"fullDate"|uppercase}} at Timezone: {{user.completeDate|date|date :"mediumTime"}} </p><br>
+   
+      </div>  --> -->
