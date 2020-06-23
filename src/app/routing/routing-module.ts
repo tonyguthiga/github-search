@@ -8,12 +8,10 @@ import { AboutComponent } from '../about/about.component';
 import { NotFoundComponent } from '../not-found/not-found.component'
 
 
-// Defining routes
 const routes:Routes=[
   {path:"user",component:UserComponent},
   {path:"about",component:AboutComponent},
   {path:"",redirectTo:"/user",pathMatch:"full"},
-  //{path: 'user/:id', component: UserComponent},
   {path:'**',component:NotFoundComponent}
 ]
 
